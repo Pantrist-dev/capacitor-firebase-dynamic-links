@@ -1,0 +1,1 @@
+capacitor-firebase-dynamic-links
