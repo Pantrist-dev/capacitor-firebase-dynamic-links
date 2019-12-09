@@ -1,0 +1,50 @@
+{
+  "name": "@clipboardhealth/capacitor-firebase-dynamic-links",
+  "version": "0.0.1",
+  "description": "Capacitor Plugin for Firebase Dynamic Links",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Bharani",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4",
+    "@capacitor/ios": "latest",
+    "@capacitor/android": "latest"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "clipboardhealthCapacitorFirebaseDynamicLinks.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClipboardHealth/capacitor-firebase-dynamic-links.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ClipboardHealth/capacitor-firebase-dynamic-links.git/issues"
+  },
+  "homepage": "https://github.com/ClipboardHealth/capacitor-firebase-dynamic-links#readme"
+}
