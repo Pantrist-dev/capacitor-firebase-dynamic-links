@@ -1,4 +1,5 @@
-[![npm version](https://badge.fury.io/js/%40clipboardhealth%2Fcapacitor-app-analytics@2x.png)](https://badge.fury.io/js/%40clipboardhealth%2Fcapacitor-app-analytics)
+[![npm version](https://badge.fury.io/js/capacitor-firebase-dynamic-links.svg)](https://badge.fury.io/js/capacitor-firebase-dynamic-links)
+
 
 # capacitor-firebase-dynamic-links
 
