@@ -1,6 +1,3 @@
-[![npm version](https://badge.fury.io/js/capacitor-firebase-dynamic-links.svg)](https://badge.fury.io/js/capacitor-firebase-dynamic-links)
-
-
 # capacitor-firebase-dynamic-links
 
 Capacitor plugin for [Firebase Dynamic Links](https://firebase.google.com/docs/dynamic-links)
@@ -8,23 +5,24 @@ Capacitor plugin for [Firebase Dynamic Links](https://firebase.google.com/docs/d
 ## Installation
 
 ```
-npm i @clipboardhealth/capacitor-firebase-dynamic-links
+npm i @turnoutt/capacitor-firebase-dynamic-links
 ```
 
 ### Android Configuration
 
 In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
 
-```
+```java
+import com.turnoutt.firebase.dynamiclinks.CapacitorFirebaseDynamicLinks;
+
 this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
-  [...]
-  add(health.clipboard.links.dynamic.firebase.capacitor.CapacitorFirebaseDynamicLinks.class);
-  [...]
+
+  add(CapacitorFirebaseDynamicLinks.class);
+
 }});
 ```
+
 For advanced options please refer https://firebase.google.com/docs/dynamic-links/android/create
-
-
 
 ### iOS Configuration
 
@@ -42,14 +40,13 @@ FirebaseApp.configure()
 
 For advanced options please refer https://firebase.google.com/docs/dynamic-links/ios/create
 
-
 ### Web
 
 None
 
 ## Methods
 
-### CapacitorFirebaseDynamicLinks.addListener('deepLinkOpen', (data: { url: string })
+### addListener('deepLinkOpen', (data: { url: string })
 
 Add this method when the app starts to listen for the dynamic link.
 
@@ -58,3 +55,11 @@ CapacitorFirebaseDynamicLinks.addListener('deepLinkOpen', (data: { url: string }
       Implement your navigation handler
     })
 ```
+
+### createDynamicLink(linkConfiguration: LinkConfig)
+
+This method is used to create a new dynamic link.
+
+### createDynamicShortLink(linkConfiguration: LinkConfig)
+
+This method is used to create a new dynamic short link.
