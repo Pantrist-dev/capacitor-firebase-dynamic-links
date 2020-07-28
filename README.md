@@ -26,19 +26,8 @@ For advanced options please refer https://firebase.google.com/docs/dynamic-links
 
 ### iOS Configuration
 
-1. Import the Firebase module in your `UIApplicationDelegate`:
-
-```
-import Firebase
-```
-
-2. Configure a FirebaseApp shared instance, typically in your app's `application:didFinishLaunchingWithOptions:` method:
-
-```
-FirebaseApp.configure()
-```
-
-For advanced options please refer https://firebase.google.com/docs/dynamic-links/ios/create
+1. Configure your app to use dynamic links
+   https://firebase.google.com/docs/dynamic-links/ios/receive
 
 ### Web
 
