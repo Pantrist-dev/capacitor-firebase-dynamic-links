@@ -32,6 +32,7 @@ export interface LinkConfig {
 }
 
 export interface AndroidParameters {
+  packageName: string;
   fallbackUrl?: string;
   minimumVersion?: number;
 }

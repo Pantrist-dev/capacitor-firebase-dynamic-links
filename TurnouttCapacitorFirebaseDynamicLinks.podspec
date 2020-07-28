@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
     s.name = 'TurnouttCapacitorFirebaseDynamicLinks'
-    s.version = '0.2.0'
+    s.version = '0.2.1'
     s.summary = 'Capacitor Plugin for Firebase Dynamic Links'
     s.license = 'MIT'
     s.homepage = 'https://github.com/Turnoutt/capacitor-firebase-dynamic-links.git'
