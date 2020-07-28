@@ -49,10 +49,12 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
         buildSocialMetaParameters(call: call, builder: builder)
         
         builder.shorten() { url, warnings, error in
-          guard let url = url, error != nil else { return }
-          print("The short URL is: \(url)")
+            print("The short URL is: \(url)")
+            
+            guard let url = url, error == nil else { return }
+            
             call.success([
-                "value": url
+                "value": url.absoluteString
             ])
         }
         
