@@ -71,43 +71,59 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
     }
 
     @objc func handleUrlOpened(notification: NSNotification) {
-        guard let object = notification.object as? [String: Any?] else {
+        guard
+          let object = notification.object as? [String: Any?],
+          let url = object["url"] as? URL
+        else {
+            print("CapacitorFirebaseDynamicLinks.handleUrlOpened() - couldn't parse url from notification")
             return
         }
 
-        if DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: object["url"] as! URL) != nil {
-            notifyListeners("deepLinkOpen", data: makeUrlOpenObject(object), retainUntilConsumed: true)
-        }
+        if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+          self.handleLink(dynamicLink)
+        } else {
+          // This is likely to be a custom URL from some other process
+      }
     }
 
     @objc func handleUniversalLink(notification: NSNotification) {
-        guard let object = notification.object as? [String: Any?] else {
+        guard
+            let object = notification.object as? [String: Any?],
+            let url = object["url"] as? NSURL,
+            let parsed = URL(string: url.absoluteString!)
+        else {
+            print("CapacitorFirebaseDynamicLinks.handleUniversalLink() - couldn't parse url from notification")
             return
         }
 
-        guard let url = object["url"] as? NSURL else { return }
-        guard let parsedUrl = URL(string: url.absoluteString!) else { return }
+        let response = DynamicLinks.dynamicLinks().handleUniversalLink(parsed) { (dynamiclink, error) in
+            guard error == nil else {
+              print("handleUniversalLink -> error: \(String(describing: error?.localizedDescription))")
+              return
+            }
 
-        let response = DynamicLinks.dynamicLinks().handleUniversalLink(parsedUrl) { dynamiclink, _ in
-
-            let url = dynamiclink?.url?.absoluteString ?? ""
-
-            self.notifyListeners("deepLinkOpen", data: ["url": url], retainUntilConsumed: true)
+            if let dynamicLink = dynamiclink {
+              self.handleLink(dynamicLink)
+            }
         }
 
         if !response {
-            print("Unable to parse dynamic link. Please ensure you have set up Firebase Dynamic Links correctly.")
+            print("""
+              CapacitorFirebaseDynamicLinks.handleUniversalLink()
+              Unable to parse dynamic link. Please ensure you have set up Firebase Dynamic Links correctly.
+            """)
         }
     }
 
-    func makeUrlOpenObject(_ object: [String: Any?]) -> JSObject {
-        guard let url = object["url"] as? NSURL else {
-            return [:]
-        }
+    func handleLink(_ dynamicLink: DynamicLink) {
+      guard let url = dynamicLink.url else {
+        print("CapacitorFirebaseDynamicLinks.handleLink() - Dynamic link has no url")
+        return
+      }
 
-        return [
-            "url": url.absoluteString ?? "",
-        ]
+      print("CapacitorFirebaseDynamicLinks.handleLink() - url: \(url.absoluteString)")
+
+      self.notifyListeners("deepLinkOpen", data: ["url": url.absoluteString], retainUntilConsumed: true)
     }
 
     private func buildGoogleAnalyticsParameters(call: CAPPluginCall, builder: DynamicLinkComponents) {
