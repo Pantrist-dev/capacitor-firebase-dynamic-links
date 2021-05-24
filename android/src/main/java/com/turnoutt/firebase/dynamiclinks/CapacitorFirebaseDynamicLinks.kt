@@ -8,7 +8,7 @@ import com.getcapacitor.*
 import com.google.firebase.dynamiclinks.DynamicLink
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 
-@NativePlugin
+@CapacitorPlugin
 class CapacitorFirebaseDynamicLinks : Plugin() {
     @PluginMethod
     fun createDynamicLink(call: PluginCall) {
@@ -30,9 +30,9 @@ class CapacitorFirebaseDynamicLinks : Plugin() {
 
             val ret = JSObject()
             ret.put("value", dynamicLink.uri)
-            call.success(ret)
+            call.resolve(ret)
         } catch (ex: Exception) {
-            call.error("Unable to create DynamicLink", ex)
+            call.reject("Unable to create DynamicLink", ex)
         }
     }
 
@@ -55,9 +55,9 @@ class CapacitorFirebaseDynamicLinks : Plugin() {
 
         builder.buildShortDynamicLink().addOnSuccessListener {
             ret.put("value", it.shortLink)
-            call.success(ret)
+            call.resolve(ret)
         }.addOnFailureListener {
-            call.error(it.localizedMessage)
+            call.reject(it.localizedMessage)
         }
     }
 

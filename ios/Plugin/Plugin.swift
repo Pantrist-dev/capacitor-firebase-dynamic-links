@@ -36,7 +36,7 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
         guard let longDynamicLink = builder.url else { return }
         print("The long URL is: \(longDynamicLink)")
 
-        call.success([
+        call.resolve([
             "value": longDynamicLink,
         ])
     }
@@ -60,11 +60,11 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
             print("The short URL is: \(String(describing: url))")
 
             guard let url = url, error == nil else {
-                call.error("Unable to create link")
+                call.reject("Unable to create link")
                 return
             }
 
-            call.success([
+            call.resolve([
                 "value": String(describing: url),
             ])
         }
