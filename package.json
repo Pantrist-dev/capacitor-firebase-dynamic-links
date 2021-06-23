@@ -1,5 +1,5 @@
 {
-  "name": "@turnoutt/capacitor-firebase-dynamic-links",
+  "name": "@pantrist-dev/capacitor-firebase-dynamic-links",
   "version": "0.2.3",
   "description": "Capacitor Plugin for Firebase Dynamic Links",
   "main": "dist/esm/index.js",
@@ -42,10 +42,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ClipboardHealth/capacitor-firebase-dynamic-links.git"
+    "url": "https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links"
   },
   "bugs": {
-    "url": "https://github.com/ClipboardHealth/capacitor-firebase-dynamic-links.git/issues"
+    "url": "https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/issues"
   },
-  "homepage": "https://github.com/ClipboardHealth/capacitor-firebase-dynamic-links#readme"
+  "homepage": "https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links#readme"
 }

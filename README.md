@@ -5,7 +5,7 @@ Capacitor plugin for [Firebase Dynamic Links](https://firebase.google.com/docs/d
 ## Installation
 
 ```
-npm i @turnoutt/capacitor-firebase-dynamic-links
+npm i @pantrist-dev/capacitor-firebase-dynamic-links
 ```
 
 ### Android Configuration
