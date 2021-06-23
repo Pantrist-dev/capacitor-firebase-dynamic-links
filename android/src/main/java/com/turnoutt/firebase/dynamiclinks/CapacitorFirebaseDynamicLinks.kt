@@ -153,7 +153,7 @@ class CapacitorFirebaseDynamicLinks : Plugin() {
             val androidParameterBuilder = DynamicLink.AndroidParameters.Builder()
 
            if (androidParameters.getInteger("minimumVersion") != null) {
-               androidParameterBuilder.minimumVersion = androidParameters.getInteger("minimumVersion")
+               androidParameterBuilder.minimumVersion = androidParameters.getInteger("minimumVersion")!!
            }
 
             if (androidParameters.getString("fallbackUrl") != null) {
