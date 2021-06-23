@@ -1,5 +1,5 @@
 {
-  "name": "@pantrist-dev/capacitor-firebase-dynamic-links",
+  "name": "@pantrist/capacitor-firebase-dynamic-links",
   "version": "0.2.3",
   "description": "Capacitor Plugin for Firebase Dynamic Links",
   "main": "dist/esm/index.js",
