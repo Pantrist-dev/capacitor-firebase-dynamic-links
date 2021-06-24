@@ -1,6 +1,6 @@
 {
   "name": "@pantrist/capacitor-firebase-dynamic-links",
-  "version": "0.2.3",
+  "version": "0.2.6",
   "description": "Capacitor Plugin for Firebase Dynamic Links",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -25,7 +25,7 @@
     "dist/",
     "ios/",
     "android/",
-    "TurnouttCapacitorFirebaseDynamicLinks.podspec"
+    "PantristCapacitorFirebaseDynamicLinks.podspec"
   ],
   "keywords": [
     "capacitor",
