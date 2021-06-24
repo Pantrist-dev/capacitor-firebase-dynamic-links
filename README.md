@@ -1,5 +1,7 @@
 # capacitor-firebase-dynamic-links
 
+[![npm version](https://badge.fury.io/js/%40pantrist%2Fcapacitor-firebase-dynamic-links.svg)](https://badge.fury.io/js/%40pantrist%2Fcapacitor-firebase-dynamic-links)
+
 Capacitor plugin for [Firebase Dynamic Links](https://firebase.google.com/docs/dynamic-links)
 
 ## Installation
