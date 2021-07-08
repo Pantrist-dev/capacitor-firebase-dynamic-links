@@ -148,7 +148,7 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
                 googleAnalyticsParametersBuilder.term = googleAnalyticsParameters["term"] as? String
             }
 
-            if googleAnalyticsParameters["source"] != nil {
+            if googleAnalyticsParameters["content"] != nil {
                 googleAnalyticsParametersBuilder.content = googleAnalyticsParameters["content"] as? String
             }
 
