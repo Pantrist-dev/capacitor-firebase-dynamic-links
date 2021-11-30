@@ -15,13 +15,16 @@ npm i @pantrist/capacitor-firebase-dynamic-links
 In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
 
 ```java
-import com.turnoutt.firebase.dynamiclinks.CapacitorFirebaseDynamicLinks;
+import com.pantrist.firebase.dynamiclinks.CapacitorFirebaseDynamicLinks;
 
-this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
-
-  add(CapacitorFirebaseDynamicLinks.class);
-
-}});
+public class MainActivity extends BridgeActivity {
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      ...
+      registerPlugin(CapacitorFirebaseDynamicLinks.class);
+   }
+}
 ```
 
 For advanced options please refer https://firebase.google.com/docs/dynamic-links/android/create
