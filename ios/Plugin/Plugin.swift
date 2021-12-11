@@ -30,11 +30,8 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
         buildITunesParameters(call: call, builder: builder)
         buildSocialMetaParameters(call: call, builder: builder)
 
-        guard let longUrl = builder.url else { return }
-        print("The long URL is: \(longUrl.absoluteString)")
-
         guard let longDynamicLink = builder.url else { return }
-        print("The long URL is: \(longDynamicLink)")
+        print("The long URL is: \(longDynamicLink.absoluteString)")
 
         call.resolve([
             "value": longDynamicLink,
