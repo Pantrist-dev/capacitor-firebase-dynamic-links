@@ -14,7 +14,7 @@ export class CapacitorFirebaseDynamicLinksWeb
   implements CapacitorFirebaseDynamicLinksPlugin
 {
   createDynamicLink(linkConfig: LinkConfig): Promise<{ value: string }> {
-    const dynamicLink = new URL(linkConfig.domainUriPrefix);
+    const dynamicLink = new URL(`${linkConfig.domainUriPrefix}/`);
 
     dynamicLink.searchParams.append("link", linkConfig.uri);
 
