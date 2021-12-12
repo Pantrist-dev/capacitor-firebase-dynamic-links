@@ -61,6 +61,12 @@ export class CapacitorFirebaseDynamicLinksWeb
       }
     }
 
+    if (linkConfig.navigationInfo) {
+      if (linkConfig.navigationInfo.forcedRedirectEnabled) {
+        dynamicLink.searchParams.append('efr', '1');
+      }
+    }
+
     if (linkConfig.socialMeta) {
       if (linkConfig.socialMeta.title) {
         dynamicLink.searchParams.append('st', linkConfig.socialMeta.title);
