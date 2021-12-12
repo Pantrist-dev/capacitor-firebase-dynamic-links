@@ -23,6 +23,7 @@ export interface LinkConfig {
   socialMeta?: SocialMetaTagParameters;
   googleAnalytics?: GoogleAnalyticsParameters;
   iTunesConnectAnalytics?: ItunesConnectAnalyticsParameters;
+  webApiKey?: string;
 }
 
 export interface AndroidParameters {
