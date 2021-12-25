@@ -34,6 +34,30 @@ For advanced options please refer https://firebase.google.com/docs/dynamic-links
 
 None
 
+## Example 
+
+```ts
+import {
+  FirebaseDynamicLinks,
+  LinkConfig,
+} from '@pantrist/capacitor-firebase-dynamic-links';
+
+function createShortLink(): Promise<string> {
+   const config: LinkConfig = {
+      domainUriPrefix: 'https://example.page.link',
+      uri: 'https://example.page.link/sharing',
+   };
+   return FirebaseDynamicLinks.createShortLink(config).then(link => link.value);
+}
+
+function listenToDeepLinkOpen() {
+   FirebaseDynamicLinks.addListener('deepLinkOpen', (data) => {
+       console.log(data);
+   });
+}
+```
+
+
 ## API
 
 <docgen-index>
@@ -157,9 +181,9 @@ Its basically a shortened version of the dynamic link.   *
 
 #### NavigationInfoParameters
 
-| Prop                        | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`forcedRedirectEnabled`** | <code>boolean</code> | If set to '1', skip the app preview page when the Dynamic Link is opened, and instead redirect to the app or store. The app preview page (enabled by default) can more reliably send users to the most appropriate destination when they open Dynamic Links in apps; however, if you expect a Dynamic Link to be opened only in apps that can open Dynamic Links reliably without this page, you can disable it with this parameter. This parameter will affect the behavior of the Dynamic Link only on iOS. |
+| Prop                        | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`forcedRedirectEnabled`** | <code>boolean</code> | If set to true, skip the app preview page when the Dynamic Link is opened, and instead redirect to the app or store. The app preview page (enabled by default) can more reliably send users to the most appropriate destination when they open Dynamic Links in apps; however, if you expect a Dynamic Link to be opened only in apps that can open Dynamic Links reliably without this page, you can disable it with this parameter. This parameter will affect the behavior of the Dynamic Link only on iOS. |
 
 
 #### SocialMetaTagParameters
