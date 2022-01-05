@@ -12,6 +12,11 @@ export interface CapacitorFirebaseDynamicLinksPlugin {
   ): PluginListenerHandle;
 
   /**
+   * Remove all native listeners for this plugin
+   */
+  removeAllListeners(): Promise<void>;
+
+  /**
    * Creates a new dynamic Link based on the configuration
    * @param linkConfiguration configuration for the link
    */

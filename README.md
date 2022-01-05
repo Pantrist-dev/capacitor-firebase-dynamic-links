@@ -63,6 +63,7 @@ function listenToDeepLinkOpen() {
 <docgen-index>
 
 * [`addListener('deepLinkOpen', ...)`](#addlistenerdeeplinkopen-)
+* [`removeAllListeners()`](#removealllisteners)
 * [`createDynamicLink(...)`](#createdynamiclink)
 * [`createDynamicShortLink(...)`](#createdynamicshortlink)
 * [Interfaces](#interfaces)
@@ -86,6 +87,17 @@ Adds a listener to the opening of a dynamic link
 | **`listenerFunc`** | <code>(data: <a href="#deeplinkopen">DeepLinkOpen</a>) =&gt; void</code> | Callback function to be called when the event is fired |
 
 **Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+
+--------------------
+
+
+### removeAllListeners()
+
+```typescript
+removeAllListeners() => Promise<void>
+```
+
+Remove all native listeners for this plugin
 
 --------------------
 
