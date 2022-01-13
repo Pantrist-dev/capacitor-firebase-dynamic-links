@@ -1,5 +1,9 @@
 # Change Log
 
+## [Unreleased]
+
+- Migrate from JCenter to MavenCentral [#7](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/pull/7)
+
 ## [1.1.0] (2021-12-12)
 
 ### Features
