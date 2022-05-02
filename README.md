@@ -28,9 +28,24 @@ For advanced options please refer https://firebase.google.com/docs/dynamic-links
 ### iOS
 
 Configure your app to use dynamic links based on the official Firebase documentation.
-You only need to apply the steps 1-3 of the following guid:
+You need to apply the following three steps for iOS.
+They should be the same as the first three steps of the [official Firebase documentation](https://firebase.google.com/docs/dynamic-links/ios/receive#open-dynamic-links-in-your-app).
 
-https://firebase.google.com/docs/dynamic-links/ios/receive
+1. In the Info tab of your app's Xcode project, create a new URL type to be used for Dynamic Links. Set the Identifier field to a unique value and the URL scheme field to be your bundle identifier, which is the default URL scheme used by Dynamic Links.
+2. In the Capabilities tab of your app's Xcode project, enable Associated Domains and add the following to the Associated Domains list:
+
+```
+applinks:your_dynamic_links_domain
+```
+
+3. If you want to receive Dynamic Links with a [fully-custom domain](https://firebase.google.com/docs/dynamic-links/custom-domains), in your Xcode project's Info.plist file, create a key called FirebaseDynamicLinksCustomDomains and set it to your app's Dynamic Links URL prefixes. For example:
+
+```
+FirebaseDynamicLinksCustomDomains
+    https://example.com/promos
+    https://example.com/links/share
+```
+
 
 ### Web
 
