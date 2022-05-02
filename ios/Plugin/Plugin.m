@@ -6,4 +6,5 @@
 CAP_PLUGIN(CapacitorFirebaseDynamicLinks, "CapacitorFirebaseDynamicLinks",
            CAP_PLUGIN_METHOD(createDynamicLink, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(createDynamicShortLink, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(removeAllListeners, CAPPluginReturnNone);
 )
