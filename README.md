@@ -27,8 +27,10 @@ For advanced options please refer https://firebase.google.com/docs/dynamic-links
 
 ### iOS
 
-1. Configure your app to use dynamic links
-   https://firebase.google.com/docs/dynamic-links/ios/receive
+Configure your app to use dynamic links based on the official Firebase documentation.
+You only need to apply the steps 1-3 of the following guid:
+
+https://firebase.google.com/docs/dynamic-links/ios/receive
 
 ### Web
 
