@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.1.2] (2021-12-12)
+
+### Bug Fixes
+
+- Readds JCenter as Repository to solve issue with missing dependency.
+
 
 ## [1.1.1] (2021-12-12)
 
