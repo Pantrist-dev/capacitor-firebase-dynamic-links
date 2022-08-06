@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [4.0.0] (2022-06-08)
+
+### BREAKING CHANGES
+
+- Only support Capacitor Version 4.
+
+
 ## [1.1.2] (2021-12-12)
 
 ### Bug Fixes

@@ -8,7 +8,7 @@
     s.author = 'Bharani'
     s.source = { :git => 'https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links.git', :tag => s.version.to_s }
     s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
-    s.ios.deployment_target  = '12.0'
+    s.ios.deployment_target  = '13.0'
     s.dependency 'Capacitor'
     s.dependency 'Firebase/Analytics'
     s.dependency 'Firebase/DynamicLinks'
