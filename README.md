@@ -8,22 +8,7 @@ Capacitor plugin for [Firebase Dynamic Links](https://firebase.google.com/docs/d
 
 ### Android
 
-In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
-
-```java
-import com.pantrist.firebase.dynamiclinks.CapacitorFirebaseDynamicLinks;
-
-public class MainActivity extends BridgeActivity {
-   @Override
-   public void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      ...
-      registerPlugin(CapacitorFirebaseDynamicLinks.class);
-   }
-}
-```
-
-For advanced options please refer https://firebase.google.com/docs/dynamic-links/android/create
+None
 
 ### iOS
 
