@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* **ios:** solve parsing issue of result in `createDynamicLink` ([1263e43](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/1263e43a96b347a955aee9a5642e72f8b360f721)), closes [#20](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/issues/20)
+* **ios:** solve parsing issue of result in `createDynamicLink` ([1263e43](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/1263e43a96b347a955aee9a5642e72f8b360f721)), closes [#21](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/issues/21)
 
 ### 4.0.1 (2022-11-16)
 
