@@ -1,6 +1,6 @@
 {
   "name": "@pantrist/capacitor-firebase-dynamic-links",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Capacitor Plugin for Firebase Dynamic Links",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -11,7 +11,8 @@
     "prepublishOnly": "npm run build",
     "format:write": "prettier --write src/**/*.ts",
     "format:check": "prettier --check src/**/*.ts",
-    "docgen": "docgen --api CapacitorFirebaseDynamicLinksPlugin --output-readme README.md --output-json dist/docs.json"
+    "docgen": "docgen --api CapacitorFirebaseDynamicLinksPlugin --output-readme README.md --output-json dist/docs.json",
+    "release": "standard-version"
   },
   "author": "Nico Lueg (nicolueg@yahoo.de)",
   "license": "MIT",
@@ -24,7 +25,8 @@
     "@capacitor/ios": "^4.0.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "standard-version": "^9.5.0"
   },
   "files": [
     "dist/",
