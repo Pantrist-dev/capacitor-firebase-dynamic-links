@@ -34,7 +34,7 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
         print("The long URL is: \(longDynamicLink.absoluteString)")
 
         call.resolve([
-            "value": longDynamicLink,
+            "value": String(describing: longDynamicLink),
         ])
     }
 
