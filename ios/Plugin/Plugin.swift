@@ -14,8 +14,8 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
 
         DynamicLinks.performDiagnostics(completion: nil)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(handleUrlOpened(notification:)), name: Notification.Name(CAPNotifications.URLOpen.name()), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleUniversalLink(notification:)), name: Notification.Name(CAPNotifications.UniversalLinkOpen.name()), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleUrlOpened(notification:)), name: Notification.Name.capacitorOpenURL, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleUniversalLink(notification:)), name: Notification.Name.capacitorOpenUniversalLink, object: nil)
     }
 
     @objc func createDynamicLink(_ call: CAPPluginCall) {
