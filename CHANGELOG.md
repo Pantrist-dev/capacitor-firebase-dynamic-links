@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/compare/v4.0.2...v4.1.0) (2023-01-23)
+
+
+### Features
+
+* **common-js:** support common-js syntax for import ([e39e2b0](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/e39e2b047c929bf419da4f2bc1220f1de62e4dcf))
+
 ### [4.0.2](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/compare/v4.0.1...v4.0.2) (2022-11-16)
 
 
