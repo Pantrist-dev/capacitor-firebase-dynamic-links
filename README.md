@@ -50,7 +50,7 @@ function createShortLink(): Promise<string> {
       domainUriPrefix: 'https://example.page.link',
       uri: 'https://example.page.link/sharing',
    };
-   return FirebaseDynamicLinks.createShortLink(config).then(link => link.value);
+   return FirebaseDynamicLinks.createDynamicShortLink(config).then(link => link.value);
 }
 
 function listenToDeepLinkOpen() {
