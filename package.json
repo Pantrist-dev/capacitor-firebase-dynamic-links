@@ -1,6 +1,6 @@
 {
   "name": "@pantrist/capacitor-firebase-dynamic-links",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Capacitor Plugin for Firebase Dynamic Links",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
