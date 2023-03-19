@@ -32,9 +32,10 @@
     "typescript": "^4.2.4"
   },
   "files": [
+    "android/src/main",
+    "android/build.gradle",
     "dist/",
-    "ios/",
-    "android/",
+    "ios/Plugin/",
     "PantristCapacitorFirebaseDynamicLinks.podspec"
   ],
   "keywords": [
