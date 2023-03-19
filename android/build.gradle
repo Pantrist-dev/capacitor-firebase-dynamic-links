@@ -50,7 +50,6 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')

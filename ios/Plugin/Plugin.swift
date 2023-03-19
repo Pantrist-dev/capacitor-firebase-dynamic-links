@@ -54,12 +54,13 @@ public class CapacitorFirebaseDynamicLinks: CAPPlugin {
         print("The long URL is: \(builder.url!.absoluteString)")
 
         builder.shorten { url, _, error in
-            print("The short URL is: \(String(describing: url))")
-
             guard let url = url, error == nil else {
+                print("createDynamicShortLink -> error: \(String(describing: error?.localizedDescription))")
                 call.reject("Unable to create link")
                 return
             }
+            
+            print("The short URL is: \(String(describing: url))")
 
             call.resolve([
                 "value": String(describing: url),
