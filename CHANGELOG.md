@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/compare/v4.0.2...v4.2.0) (2023-03-19)
+
+
+### Features
+
+* **common-js:** support common-js syntax for import ([b8fc824](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/b8fc824706e872b43e5ba0433e07b0a82eefd1bd))
+
+
+### Bug Fixes
+
+* **ios:** print more information about the exception when shorten the link ([803cca4](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/803cca40aaddfb1397a0cacd289693f659b1471a))
+* **ios:** resolve small ios warnings ([ec567ff](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/ec567ff5a9fae872dba03e7b4858fec6827137b9))
+
 ## [4.1.0](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/compare/v4.0.2...v4.1.0) (2023-01-23)
 
 
