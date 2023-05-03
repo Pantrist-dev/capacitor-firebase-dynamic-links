@@ -19,12 +19,12 @@
   "author": "Nico Lueg (nicolueg@yahoo.de)",
   "license": "MIT",
   "peerDependencies": {
-    "@capacitor/core": "^5.0.0-rc.0"
+    "@capacitor/core": "next"
   },
   "devDependencies": {
-    "@capacitor/android": "^5.0.0-rc.0",
+    "@capacitor/android": "next",
     "@capacitor/docgen": "^0.2.0",
-    "@capacitor/ios": "^5.0.0-rc.0",
+    "@capacitor/ios": "next",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "2.77.2",
