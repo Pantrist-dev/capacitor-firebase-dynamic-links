@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/compare/v5.0.0...v5.0.1) (2023-05-03)
+
+
+### Bug Fixes
+
+* **dependencies:** use next instead of concrete version ([fcc41fa](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/commit/fcc41fa40aeaefc0550db18a9fed945f29f3aa13))
+
 ## [5.0.0](https://github.com/Pantrist-dev/capacitor-firebase-dynamic-links/compare/v4.1.1...v5.0.0) (2023-05-03)
 
 
