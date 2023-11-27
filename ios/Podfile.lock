@@ -2,8 +2,6 @@ PODS:
   - Capacitor (4.0.1):
     - CapacitorCordova
   - CapacitorCordova (4.0.1)
-  - Firebase/Analytics (6.7.0):
-    - Firebase/Core
   - Firebase/Core (6.7.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.1)
@@ -77,7 +75,6 @@ PODS:
 DEPENDENCIES:
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
-  - Firebase/Analytics
   - Firebase/DynamicLinks
 
 SPEC REPOS:
