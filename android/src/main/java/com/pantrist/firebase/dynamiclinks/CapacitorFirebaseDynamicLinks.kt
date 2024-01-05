@@ -116,7 +116,7 @@ class CapacitorFirebaseDynamicLinks : Plugin() {
     private fun buildIOSParameters(call: PluginCall, builder: DynamicLink.Builder) {
         val iosParameters = call.getObject("iosParameters")
 
-        if (iosParameters.getString("bundleId") != null) {
+        if (iosParameters?.getString("bundleId") != null) {
             val iosParameterBuilder = DynamicLink.IosParameters.Builder(iosParameters.getString("bundleId")!!)
 
             if (iosParameters.getString("appStoreId") != null) {
