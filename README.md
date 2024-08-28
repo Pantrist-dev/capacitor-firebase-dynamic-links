@@ -5,9 +5,9 @@
 
 Capacitor plugin for [Firebase Dynamic Links](https://firebase.google.com/docs/dynamic-links).
 
-# ⚠️ *Firebase shutdown at the 25th August 2025* ⚠️
+# ⚠️ *Firebase dynamic links shutdown at the 25th August 2025* ⚠️
 
-Firebase, and also this plugin, will work until that day. But it won't be working anymore after that.
+Firebase dynamic links, and also this plugin, will work until that day. But it won't be working anymore after that.
 If you plan to implement something similar, you should search for alternatives. I went with [capacitor-branch-deep-links](https://github.com/BranchMetrics/capacitor-branch-deep-links).
 
 ## Configuration 
